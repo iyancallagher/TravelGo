@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #0EA5E9;
+  --secondary: #F97316;
+  --accent: #10B981;
+  --dark: #111827;
+  --soft: #F3F4F6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  color: var(--dark);
+  background: white;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 md:px-6;
+}
+
+.section-padding {
+  @apply py-20 md:py-28;
+}

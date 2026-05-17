@@ -1,0 +1,67 @@
+---
+interface Props {
+  title: string;
+  category: string;
+  duration: string;
+  price: string;
+  image: string;
+}
+
+const {
+  title,
+  category,
+  duration,
+  price,
+  image,
+} = Astro.props;
+---
+
+<div
+  class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500"
+>
+
+  <!-- Image -->
+  <div class="relative h-72 overflow-hidden">
+
+    <img
+      src={image}
+      alt={title}
+      class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+    />
+
+    <div
+      class="absolute top-5 left-5 bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold"
+    >
+      {category}
+    </div>
+
+  </div>
+
+  <!-- Content -->
+  <div class="p-6">
+
+    <h3 class="text-2xl font-bold mb-3">
+      {title}
+    </h3>
+
+    <div
+      class="flex items-center justify-between text-gray-500 mb-6"
+    >
+
+      <span>{duration}</span>
+
+      <span class="text-orange-500 font-bold text-xl">
+        {price}
+      </span>
+
+    </div>
+
+    <button
+      class="w-full bg-sky-500 hover:bg-sky-600 text-white py-4 rounded-2xl font-semibold transition"
+    >
+      Book Now
+    </button>
+
+  </div>
+
+</div>

@@ -1,0 +1,69 @@
+---
+const testimonials = [
+  {
+    name: "Amanda",
+    review:
+      "Amazing trip experience! Everything was perfectly organized.",
+  },
+
+  {
+    name: "Michael",
+    review:
+      "The best travel agency I've ever used. Highly recommended!",
+  },
+
+  {
+    name: "Sarah",
+    review:
+      "Beautiful destinations and very professional guides.",
+  },
+];
+---
+
+<section class="section-padding bg-gray-50">
+
+  <div class="container-custom">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+
+      <p class="text-orange-500 font-semibold mb-3">
+        Testimonials
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-bold">
+        What Travelers Say
+      </h2>
+
+    </div>
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-3 gap-8">
+
+      {
+        testimonials.map((item) => (
+          <div
+            class="bg-white p-8 rounded-3xl shadow-lg"
+          >
+
+            <div class="text-yellow-400 text-2xl mb-5">
+              ⭐⭐⭐⭐⭐
+            </div>
+
+            <p class="text-gray-600 mb-6">
+              "{item.review}"
+            </p>
+
+            <h3 class="font-bold text-lg">
+              {item.name}
+            </h3>
+
+          </div>
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</section>

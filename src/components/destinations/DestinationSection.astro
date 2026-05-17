@@ -1,0 +1,36 @@
+---
+import DestinationCard from "./DestinationCard.astro";
+import { destinations } from "../../data/destinations";
+---
+
+<section class="section-padding bg-gray-50">
+
+  <div class="container-custom">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+
+      <p class="text-orange-500 font-semibold mb-3">
+        Popular Destination
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-bold">
+        Explore Top Destinations
+      </h2>
+
+    </div>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {
+        destinations.map((destination) => (
+          <DestinationCard {...destination} />
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</section>

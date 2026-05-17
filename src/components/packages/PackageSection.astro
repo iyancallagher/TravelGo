@@ -1,0 +1,67 @@
+---
+import PackageCard from "./PackageCard.astro";
+import { packages } from "../../data/packages";
+---
+
+<section class="section-padding">
+
+  <div class="container-custom">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+
+      <p class="text-orange-500 font-semibold mb-3">
+        Tour Package
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-bold">
+        Choose Your Favorite Package
+      </h2>
+
+    </div>
+
+    <!-- Filter -->
+    <div
+      class="flex flex-wrap justify-center gap-4 mb-14"
+    >
+
+      <button
+        class="bg-sky-500 text-white px-6 py-3 rounded-full font-semibold"
+      >
+        All
+      </button>
+
+      <button
+        class="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-full font-semibold transition"
+      >
+        Domestic
+      </button>
+
+      <button
+        class="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-full font-semibold transition"
+      >
+        International
+      </button>
+
+      <button
+        class="bg-gray-100 hover:bg-gray-200 px-6 py-3 rounded-full font-semibold transition"
+      >
+        Honeymoon
+      </button>
+
+    </div>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {
+        packages.map((item) => (
+          <PackageCard {...item} />
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</section>

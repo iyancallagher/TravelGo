@@ -1,0 +1,53 @@
+---
+const items = [
+  "Professional Guide",
+  "Affordable Price",
+  "Best Destination",
+  "Safety First",
+  "24/7 Support",
+];
+---
+
+<section class="section-padding">
+
+  <div class="container-custom">
+
+    <div class="text-center mb-16">
+
+      <p class="text-orange-500 font-semibold mb-3">
+        Why Choose Us
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-bold">
+        We Make Your Travel More Enjoyable
+      </h2>
+
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+
+      {
+        items.map((item) => (
+          <div
+            class="bg-white rounded-3xl p-8 text-center shadow-lg hover:-translate-y-2 hover:shadow-2xl transition"
+          >
+
+            <div
+              class="w-16 h-16 mx-auto mb-6 rounded-full bg-sky-100 flex items-center justify-center text-2xl"
+            >
+              ✈️
+            </div>
+
+            <h3 class="font-bold text-lg">
+              {item}
+            </h3>
+
+          </div>
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</section>
